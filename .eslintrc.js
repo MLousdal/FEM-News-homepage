@@ -23,6 +23,7 @@ module.exports = {
     'comma-dangle': ['error', 'only-multiline'],
     'id-length': [2, { exceptions: ['i', 'j', '_'] }],
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_' }],
+    'vue/multi-word-component-names': 'off'
   },
   globals: {
     defineProps: 'readonly',

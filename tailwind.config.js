@@ -1,17 +1,26 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const plugin = require('tailwindcss/plugin')
-// const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
-/** @type {import('tailwindcss').Config} */
+/* @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,ts}'],
-  // theme: {
-  //   extend: {
-  //     // here's how to extend fonts if needed
-  //     fontFamily: {
-  //       sans: [...defaultTheme.fontFamily.sans],
-  //     },
-  //   },
-  // },
+  theme: {
+    colors: {
+      'off-white': 'hsl(36, 100%, 99%)',
+      'grayish-blue': 'hsl(233, 8%, 79%)',
+      'dark-grayish-blue': 'hsl(236, 13%, 42%)',
+      'very-dark-blue': 'hsl(240, 100%, 5%)',
+      'soft-orange': 'hsl(35, 77%, 62%)',
+      'soft-red': 'hsl(5, 85%, 63%)',
+    },
+    extend: {
+      // here's how to extend fonts if needed
+      fontFamily: {
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      },
+    },
+  },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/line-clamp'),
